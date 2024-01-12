@@ -27,6 +27,16 @@ Please note, require/import is supported in a limited manner for Remix supported
 For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
 For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
 
+
+GitHub Documentation:
+https://github.com/smartcontractkit/full-blockchain-solidity-course-py
+
 Chainlink docs
 Price Feed Addresses:
 https://docs.chain.link/data-feeds/price-feeds/addresses
+
+Interactión with contracts:
+https://contracts.martinezmolina.es/
+
+Pinata IPFS:
+https://www.pinata.cloud/
