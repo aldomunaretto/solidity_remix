@@ -156,11 +156,11 @@
 			]
 		},
 		"contracts/SafeExchange.sol": {
-			"keccak256": "0x76309c2288eb790c6d40064a9983893039d799a4cd9949134d1adfa686fdd028",
+			"keccak256": "0x037deafd3b20c6e56983f634190a32a25483da508c8734ddd9a2caf390f6a4ab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4953f7212dbb362f26ab5b2bfde4225e3202e70521dcdc3e647e9bf5137d27e9",
-				"dweb:/ipfs/Qmejpbr4LNsrNkerAC28SN4hx4nJKRfNjE3G4KbLQg2mrH"
+				"bzz-raw://b04970605643e90b6870d2895817a4da9e0c9a4bf7432d58dc1b833c2d7577ca",
+				"dweb:/ipfs/QmWLifxh35SNJtxRiDwKuRELrsKQ99oLkJFHHBofTFJh3D"
 			]
 		}
 	},

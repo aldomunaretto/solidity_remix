@@ -33,7 +33,7 @@ contract SafeExchange {
         IERC721 erc721Token = IERC721(erc721TokenAddress);
         
         bool erc20TransferSuccessful = erc20Token.transferFrom(msg.sender, seller, price);
-        require(erc20TransferSuccessful, "Transferencia del ERC20 no satisfactoria. Recuerda que debes tener fondos suficientes y de hacer el allowance de minimo el precio a este contrato");
+        require(erc20TransferSuccessful, "ERC20 transfer not successful. Remember that you must have sufficient funds and make the minimum allowance for the price of this contract.");
 
         erc721Token.transferFrom(seller, msg.sender, erc721TokenId);
     }
