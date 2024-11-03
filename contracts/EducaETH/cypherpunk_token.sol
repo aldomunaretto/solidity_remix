@@ -1,25 +1,19 @@
 // SPDX-License-Identifier: MIT
-// Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity ^0.8.22;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-/// @custom:security-contact aldomunaretto@gmail.com
-contract CypherpunkToken is ERC721, Ownable {
+contract CypherpunkNFT is ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
 
-    constructor(address initialOwner)
-        ERC721("CypherpunkToken", "CypherTK")
-        Ownable(initialOwner)
-    {}
-
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://gateway.lighthouse.storage/ipfs/bafkreif6f4orrcbcwibs6calnzvo4vz5vy2gbg7fklwwfciuhlydqvvjvy";
+    constructor() ERC721("CypherpunkToken", "CypherTK") Ownable(msg.sender) {
     }
 
-    function safeMint(address to) public onlyOwner {
-        uint256 tokenId = _nextTokenId++;
-        _safeMint(to, tokenId);
+    function createNFT(address to) public onlyOwner returns (uint256) {
+        uint256 newTokenId = _nextTokenId++;
+        _safeMint(to, newTokenId);
+        _setTokenURI(newTokenId, "https://gateway.lighthouse.storage/ipfs/bafkreif6f4orrcbcwibs6calnzvo4vz5vy2gbg7fklwwfciuhlydqvvjvy");
+        return newTokenId;
     }
 }
